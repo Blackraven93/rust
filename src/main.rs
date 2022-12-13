@@ -1,5 +1,18 @@
+use std::io;
+
 fn main() {
-    number()
+    guessGame();
+    number();
+    flow();
+}
+
+fn guessGame() {
+    println!("Guess the number!");
+    println!("Please input your guess.");
+    let mut guess = String::new();
+    io::stdin().read_line(&mut guess)
+        .expect("Failed to read line");
+    println!("You guessed: {}", guess);
 }
 
 fn number() {
@@ -43,4 +56,42 @@ fn number() {
 
 fn add(i: i32, j: i32) -> i32 {
     i + j
+}
+
+fn flow() {
+    // for item in container == for item in IntoIterator::into_iter(collection) ( 소유권 )
+    // for item in &container == for item in collection.iter() -> container를 재사용하고 싶다면 ( 읽기전용 )
+    // for item in &mut collection == for item in collection.iter_mut() -> item을 수정해야 하는 경우 ( 읽고 쓰기 )
+    let collection = [1,2,3,4,5];
+    for i in 0..collection.len() {
+        let item =collection[i];
+        println!("{}", item);
+    }
+    // continue
+    // while
+    // loop
+    // break
+
+    // match item {
+    //     0 => {},
+    //     10 ..= 20 => {},
+    //     40 | 80 => {},
+    //     _ => {},
+    // }
+    // swift와 다르게 해당 타입의 가능한 모든 값에 대한 분기를 반드시 처리해야함.
+
+    let haystack = [1,1,2,5,14,42,132,429,1430,4862];
+
+    for item in &haystack {
+        let result = match item {
+            42 | 132 => "hit!",
+            _ => "miss",
+        };
+
+        if result == "hit!" {
+            println!("{} : {}", item, result)
+        }
+    }
+
+
 }
