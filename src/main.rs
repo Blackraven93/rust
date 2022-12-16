@@ -1,5 +1,7 @@
 extern crate rand;
 
+mod change_temperature;
+
 use std::io;
 use std::cmp::Ordering;
 use rand::Rng;
@@ -8,12 +10,14 @@ fn main() {
     guess_game();
     number();
     flow();
+    println!("{}°C", change_temperature::change_temperature(280));
 }
 
 fn guess_game() {
     println!("Guess the number!");
 
     let secret_number = rand::thread_rng().gen_range(1, 101);
+    println!("Secret Number is {}", secret_number);
 
     loop {
         println!("Please input your guess.");
