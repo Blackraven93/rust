@@ -66,3 +66,17 @@ fn main() {
 
 - 함수 동작 시 표현식과 구문에 대한 이해 필요
 - 세미콜론을 이용하여 return 값 유무 확인 (표현식과 구문 분류)
+
+# OwnerShip(소유권)
+
+## 소유권
+
+- stack
+- heep
+
+- shallow copy
+- deep copy
+
+## 참조자
+
+## 슬라이스
