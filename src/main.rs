@@ -1,6 +1,7 @@
 extern crate rand;
 
 mod change_temperature;
+pub mod User;
 
 use std::io;
 use std::cmp::Ordering;
