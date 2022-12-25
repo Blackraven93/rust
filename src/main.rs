@@ -28,7 +28,7 @@ fn main() {
 
     s.clear();
 
-    Rectangle::rectangle(200, 300);
+    Rectangle::rectangle(20, 50).area();
 }
 
 fn first_word(s: &String) -> usize {

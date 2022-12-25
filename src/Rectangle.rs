@@ -1,19 +1,24 @@
+#[derive(Debug)]
 pub struct Rectangle {
-  width: u32,
-  height: u32
+  length: u32,
+  width: u32
 }
 
-pub fn rectangle(width:u32, height:u32) -> Rectangle{
-  let rect = Rectangle { width, height };
+impl Rectangle {
+  pub fn area(&self) -> u32 {
+    &self.length * &self.width
+  }
+}
+
+pub fn rectangle(length:u32, width:u32) -> Rectangle {
+  let rect = Rectangle { length, width };
 
   println!(
-    "Rectangle area is : {}", area((rect.width, rect.height))
+    "Rectangle area is : {}", rect.area()
   );
-
+  
   rect
 }
 
-fn area(dimensions: (u32, u32)) -> u32 {
-  dimensions.0 * dimensions.1
-}
+
 
