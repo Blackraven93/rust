@@ -5,8 +5,7 @@ struct User {
   active: bool
 }
 
-fn main() {  
-  
+pub fn user() {  
   
   let user1 = create_user("blackraven@gmail.com".to_owned(), "raven".to_owned());
   let user2 = User {

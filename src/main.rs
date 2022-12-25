@@ -1,5 +1,8 @@
 extern crate rand;
 
+mod Rectangle;
+
+
 mod change_temperature;
 pub mod User;
 
@@ -24,6 +27,8 @@ fn main() {
     let word = first_word(&s); // word는 5를 갖게 될 것입니다.
 
     s.clear();
+
+    Rectangle::rectangle(200, 300);
 }
 
 fn first_word(s: &String) -> usize {
