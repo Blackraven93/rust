@@ -6,6 +6,7 @@ mod Rectangle;
 mod change_temperature;
 pub mod User;
 
+
 use std::io;
 use std::cmp::Ordering;
 use rand::Rng;
