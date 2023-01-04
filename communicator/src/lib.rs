@@ -1,6 +1,13 @@
+mod client;
+
 pub fn add(left: usize, right: usize) -> usize {
     left + right
 }
+
+fn main() {
+    client::connect()
+}
+
 
 #[cfg(test)]
 mod tests {

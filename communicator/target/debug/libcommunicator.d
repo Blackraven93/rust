@@ -1,0 +1,1 @@
+/Users/raven/Desktop/programming/rust/rust_basic/communicator/target/debug/libcommunicator.rlib: /Users/raven/Desktop/programming/rust/rust_basic/communicator/src/client.rs /Users/raven/Desktop/programming/rust/rust_basic/communicator/src/lib.rs
